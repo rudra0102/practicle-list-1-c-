@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char operatorChoice;
+    double num1, num2, result;
+
+    cout << "Enter operator (+, -, *, /): ";
+    cin >> operatorChoice;
+
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    switch (operatorChoice) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            if (num2 == 0) {
+                cout << "Error: Division by zero is not allowed." << endl;
+                return 1;
+            }
+            result = num1 / num2;
+            break;
+        default:
+            cout << "Invalid operator choice." << endl;
+            return 1;
+    }
+
+    cout << "Result: " << num1 << " " << operatorChoice << " " << num2 << " = " << result << endl;
+
+    return 0;
+}
