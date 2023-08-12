@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+    int main() {
+    double num1, num2;
+
+
+    cout << "Enter the first number: ";
+    cin >> num1;
+
+
+    cout << "Enter the second number: ";
+    cin >> num2;
+
+    double sum = num1 + num2;
+    double difference = num1 - num2;
+    double product = num1 * num2;
+    double quotient = num1 / num2;
+    int modulo = static_cast<int>(num1) % static_cast<int>(num2);
+
+    cout << "Sum: " << sum << std::endl;
+    cout << "Difference: " << difference << std::endl;
+    cout << "Product: " << product << std::endl;
+    cout << "Quotient: " << quotient << std::endl;
+    cout << "Modulo: " << modulo << std::endl;
+
+    return 0;
+}
